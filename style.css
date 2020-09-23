@@ -1,36 +1,41 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   width: 100%;
   height: 100vh;
-  background-color: rgb(236, 236, 236);  
-}
-header{
-  width: 100%;
-  height: 10vh;
-  background-color: rgb(40, 40, 143);
+  background-color: rgb(13, 117, 214);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Karla', sans-serif;
 }
 
-#logo-container{
+header {
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(18, 0, 177);
+}
+
+#logo-container {
   width: 1200px;
   height: 10vh;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 0 0  20px 20px;
-
+  border-radius: 0 0 20px 20px;
 }
-#logo{
+
+#logo {
   display: block;
   width: 250px;
 }
 
-#menu-contaienr{
+#menu-contaienr {
   width: 800px;
   height: 8vh;
   margin: 0px auto;
@@ -39,7 +44,7 @@ header{
   justify-content: space-around;
 }
 
-.menu-link{
+.menu-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,117 +59,211 @@ header{
 }
 
 #container {
-  width: 100%;
-  height: 85vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-left: 30px;
-  padding-top: 50px;
-  
-}
-#gen-pokemon-container{
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-.gen_pokemons{
   width: 90%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+  background-size: cover;
+  background-position: bottom;
+}
+
+#gen-pokemon-container {
+  max-width: 47.5%;
   height: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; 
+}
+
+.gen_pokemons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   overflow-y: scroll;
-  border-radius: 30px !important;
-  background-image: url(img/background.jpg);
   background-attachment: cover;
   background-position: bottom;
   behavior: smooth;
-  border: 3px solid rgb(40, 40, 143);
 }
 
 .gen_pokemons::-webkit-scrollbar {
   display: none;
 }
 
-.pokemon_sprite{
-  width: auto;
-  height: 20%;
+.poke-box{
+  width: 250px;
+  height: 350px;
+  position: relative;
   display: inline-block;
-  
+  border: 2px solid #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.sprite-container {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
 }
 
-#single-pokemon-card{
-  width: 50% ;
+.dbl-type-color{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  top: 0;
+  flex-direction: row;
+  position: relative;
+}
+.type-color{
+  width: 100%;
+  height: 100%;
+}
+.pokemon_sprite {
+  width: 80%;
+  height: auto;
+  display: inline-block;
+  margin-top: 5px;
+ 
+}
+.sprite-name{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff;
+}
+#single-pokemon-card {
+  width: 47.5%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   border-collapse: collapse;
 }
 
-#poke-header{
+#poke-header {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-right: 30px;
-  
+  position: relative;
 }
 
-#image-container{
-  width: 100%;
+#image-container {
+  width: 90%;
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background-image: url(img/forest.jpg);
-  background-size: cover; 
+  background-size: cover;
   border-radius: 30px;
-  border: 3px solid rgb(40, 40, 143);
-}
-.poke-image{
-  width: 350px;
-  height: auto;
-  display: block;
-}
-
-#pokeinfo-container{
-  width: 100%;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  position: relative;
+  background-image: url(img/background.jpg);
+  background-size: cover;
+  background-position: bottom;
+  border: 3px solid #fff;
   
 }
-#name-id-container{
+
+.poke-image {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  
+  
+  
+}
+
+#pokeinfo-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#carousel-container {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 30px;
+  background-color: rgb(16, 148, 236);
+}
+
+.arrow {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.crsl-btn {
+  border: none;
+  outline: none;
+  font-size: 35px;
+  background: none;
+  color: #fff;
+}
+
+#info-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.carousel {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+#evolution-line-container {
+  height: 100%;
+  left: 0;
+}
+
+#name-id-container {
   width: 100%;
   height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* background-color: rgb(233, 13, 13); */
-  
 }
-.title{
-  color: #000;
+.title {
+  color: #fff;
   font-size: 30px;
 }
 
-#stats-container{
+#stats-container {
   width: 100%;
-  height : 100%;
+  height: 100%;
+  left: 100%;
   display: flex;
   flex-direction: row;
+  flex-direction: row;
   flex-wrap: wrap;
-  background-color: rgb(40, 40, 143);
-  border-radius: 30px;
-  /* background-color: rgb(233, 13, 13); */
 }
-#base-info{
+
+#base-info {
   width: 40%;
   height: 100%;
   display: flex;
@@ -173,10 +272,9 @@ header{
   justify-content: center;
   border-radius: 30px 0px 0px 30px;
   color: #fff;
-
 }
 
-.poke-type{
+.poke-type {
   display: flex;
   width: 120px;
   align-items: center;
@@ -188,88 +286,91 @@ header{
   border: 1px solid #fff;
 }
 
+#weakness-strongness-container {
+  width: 100%;
+  height: 100%;
+  left: 200%;
+}
 
-
-.grass{
-  background-color: #78C850;
+.grass {
+  background-color: #78c850;
   color: #fff;
 }
-.poison{
-  background-color: #A040A0;
+.poison {
+  background-color: #a040a0;
   color: #fff;
 }
 .fire {
-  background-color: #F08030;
+  background-color: #f08030;
   color: #fff;
 }
-.flying{
-  background-color: #A890F0;
+.flying {
+  background-color: #a890f0;
   color: #fff;
 }
-.bug{
-  background-color: #A8B820;
+.bug {
+  background-color: #a8b820;
   color: #fff;
 }
-.normal{
-  background-color: #A8A878;
+.normal {
+  background-color: #a8a878;
   color: #fff;
 }
-.fairy{
-  background-color: #EE99AC;
+.fairy {
+  background-color: #ee99ac;
   color: #fff;
 }
-.ground{
-  background-color: #E0C068;
+.ground {
+  background-color: #e0c068;
   color: #fff;
 }
-.electric{
-  background-color: #F8D030;
+.electric {
+  background-color: #f8d030;
   color: #fff;
 }
-.steel{
-  background-color: #B8B8D0;
+.steel {
+  background-color: #b8b8d0;
   color: #fff;
 }
-.psychic{
-  background-color: #F85888;
+.psychic {
+  background-color: #f85888;
   color: #fff;
 }
-.water{
-  background-color: #6890F0;
+.water {
+  background-color: #6890f0;
   color: #fff;
 }
-.dark{
-  background-color: #49392F;
+.dark {
+  background-color: #49392f;
   color: #fff;
 }
-.fighting{
-  background-color: #C03028;
-  color : #fff;
-}
-.dragon{
-  background-color: #7038F8;
+.fighting {
+  background-color: #c03028;
   color: #fff;
 }
-.ice{
-  background-color: #98D8D8;
+.dragon {
+  background-color: #7038f8;
   color: #fff;
 }
-.rock{
-  background-color: #B8A038;
+.ice {
+  background-color: #98d8d8;
   color: #fff;
 }
-.ghost{
+.rock {
+  background-color: #b8a038;
+  color: #fff;
+}
+.ghost {
   background-color: #705898;
   color: #fff;
 }
 
-
-.physical-characteristics{ 
+.physical-characteristics {
   font-size: 22px;
   margin: 10px 0;
   color: #fff;
 }
-.single-stat{
+.single-stat {
   margin-top: 10px;
   width: 100%;
   margin-left: 5px;
@@ -278,7 +379,7 @@ header{
   color: #fff;
   font-size: 18px;
 }
-.stat-graphic{
+.stat-graphic {
   width: 300px;
   height: 20px;
   margin: 5px;
@@ -286,11 +387,10 @@ header{
   background-color: #fff;
   position: relative;
   border-radius: 10px;
-  overflow: hidden
+  overflow: hidden;
 }
 .graphic-value {
   position: absolute;
   height: 100%;
   background-color: rgb(62, 240, 91);
 }
-

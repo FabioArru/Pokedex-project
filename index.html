@@ -1,75 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css">
-  <title>Pokedex</title>
-</head>
-<body>
-  <header>
-    <div id="logo-container">
-      <img src="img/logo pokedex.png" alt="" id="logo">
-      <div id="menu-contaienr">
-        <div class="menu-link">
-          KANTO
-        </div>
-        <div class="menu-link">
-          JOHTO
-        </div>
-        <div class="menu-link">
-          HOENN
-        </div>
-        <div class="menu-link">
-          SINNOH
-        </div>
-        <div class="menu-link">
-          UNIMA
-        </div>
-        <div class="menu-link">
-          KALOS
-        </div>
-        <!-- <div class="menu-link">
-          ALOLA
-        </div>
-        <div class="menu-link">
-          GALAR
-        </div> -->
-      </div>
-    </div>
-  </header>
-  
-  <div id="container">
-    <div id="gen-pokemon-container">
-      <div class="gen_pokemons">
-      
-      </div>
-
-    </div>
-    <div id="single-pokemon-card">
-        <div id="poke-header">
-          <div id="image-container">
-
-          </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <header>
+      <div id="logo-container">
+        <img src="img/logo pokedex.png" alt="" id="logo" />
+        <div id="menu-contaienr">
+          <div class="menu-link">KANTO</div>
+          <div class="menu-link">JOHTO</div>
+          <div class="menu-link">HOENN</div>
+          <div class="menu-link">SINNOH</div>
+          <div class="menu-link">UNIMA</div>
+          <div class="menu-link">KALOS</div>
           
-          <div id="pokeinfo-container">
-            <div id="name-id-container">
+        </div>
+      </div>
+    </header>
 
-            </div>
-            <div id="stats-container">
-              <div id="base-info">
+    <div id="container">
+      <div id="gen-pokemon-container">
+        <div class="gen_pokemons"></div>
+      </div>
+      <div id="single-pokemon-card">
+        <div id="poke-header">
+          <!-- <button id="shiny">Shiny</button> -->
+          <div id="image-container">
+            
+          </div>
+          <div id="name-id-container"></div>
+
+        <div id="carousel-container">
+          <div class="arrow">
+            <button class="crsl-btn" id="prev_btn"><i class="fas fa-arrow-left"></i></button>
+          </div>
+          <div id="pokeinfo-container">
+            
+            <div id="info-container">
+              <div id="evolution-line-container" class="carousel">evoline</div>
+              <div id="stats-container" class="carousel">
+               
+                <div id="base-info"></div>
+                <div id="base-stats"></div>
+              </div>
+              <div id="weakness-strongness-container" class="carousel">
                 
               </div>
-              <div id="base-stats">
-                
-              </div>
             </div>
+            
+          </div>
+          <div class="arrow">
+            <button id="next_btn" class="crsl-btn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
           </div>
         </div>
+        </div>
+      </div>
     </div>
-  </div>
-  
-</body>
-<script src="app.js"></script>
+  </body>
+  <script src="app.js"></script>
 </html>
