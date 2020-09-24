@@ -328,12 +328,13 @@ const carousel = document.querySelector ('#info-container');
 const prevBtn = document.querySelector ('#prev_btn');
 const nextBtn = document.querySelector ('#next_btn');
 
-const size = carousel.clientWidth;
+let size = carousel.clientWidth;
 let count = 1;
 carousel.style.transform = `translateX(${-size * count}px)`;
 
 console.log (carousel);
 nextBtn.addEventListener ('click', () => {
+	size = carousel.clientWidth;
   if (count < 2) {
     count++;
     carousel.style.transition = 'transform 0.4s ease-in-out';
@@ -352,17 +353,26 @@ prevBtn.addEventListener ('click', () => {
 
 
 
-function evochain(id){
-	fetch(`https://pokeapi.co/api/v2/evolution-chain/${id}`)
+
+function getspecie(){
+	let chainevo = [];
+	fetch("https://pokeapi.co/api/v2/pokemon-species/3")
 	.then(response => {return response.json()})
 	.then(data => {
-		console.log(data.chain[0].evolves_to);
+		fetch(data.evolution_chain.url)
+		.then(reponse => {return reponse.json()})
+		.then(data => {
+			console.log(data);
+			chainevo.push(data.chain.species.name);
+			chainevo.push(data.chain.evolves_to);
+		})
 	})
+	console.log(chainevo);
 }
 
 
 
-
+getspecie();
 
 
 

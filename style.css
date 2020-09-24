@@ -60,7 +60,7 @@ header {
 
 #container {
   width: 90%;
-  height: 80vh;
+  height: 90vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -71,7 +71,7 @@ header {
 }
 
 #gen-pokemon-container {
-  max-width: 47.5%;
+  max-width: 55%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -94,15 +94,17 @@ header {
 }
 
 .poke-box{
-  width: 250px;
-  height: 350px;
+  width: 200px;
+  min-height: 300px;
+  
   position: relative;
-  display: inline-block;
+  
   border: 2px solid #fff;
   border-radius: 20px;
   overflow: hidden;
   margin: 10px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
 }
 .sprite-container {
@@ -145,11 +147,11 @@ header {
   height: 80px;
   display: flex;
   justify-content: center;
-  font-size: 22px;
+  font-size: 1.3em;
   color: #fff;
 }
 #single-pokemon-card {
-  width: 47.5%;
+  width: 45%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -212,6 +214,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
 .crsl-btn {
@@ -227,12 +230,14 @@ header {
   height: 100%;
   display: flex;
   position: relative;
+  
 }
 
 .carousel {
   width: 100%;
   position: absolute;
   top: 0;
+  
 }
 
 #evolution-line-container {
@@ -259,8 +264,8 @@ header {
   left: 100%;
   display: flex;
   flex-direction: row;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
+ 
 }
 
 #base-info {
@@ -272,6 +277,10 @@ header {
   justify-content: center;
   border-radius: 30px 0px 0px 30px;
   color: #fff;
+  
+}
+#base-stats{
+  width: auto;
 }
 
 .poke-type {
@@ -380,7 +389,7 @@ header {
   font-size: 18px;
 }
 .stat-graphic {
-  width: 300px;
+  width: 200px;
   height: 20px;
   margin: 5px;
 
@@ -393,4 +402,12 @@ header {
   position: absolute;
   height: 100%;
   background-color: rgb(62, 240, 91);
+}
+
+
+@media screen and (max-width: 300px){
+  body{
+    background-color: #000;
+  }
+
 }
